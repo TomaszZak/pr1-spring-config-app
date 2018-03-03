@@ -1,0 +1,25 @@
+buildscript {
+	ext {
+		springBootVersion = '1.5.10.RELEASE'
+	}
+	repositories {
+		mavenCentral()
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+group = 'com.tzak'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	compile group: 'org.springframework', name: 'spring-web', version: '5.0.2.RELEASE'
+	compile group: 'org.springframework.boot', name: 'spring-boot-devtools', version: '1.5.9.RELEASE'
+
+}
