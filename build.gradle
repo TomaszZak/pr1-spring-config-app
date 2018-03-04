@@ -1,6 +1,6 @@
 buildscript {
 	ext {
-		springBootVersion = '1.5.10.RELEASE'
+		apply from: 'properties.gradle'
 	}
 	repositories {
 		mavenCentral()
@@ -8,18 +8,17 @@ buildscript {
 }
 
 apply plugin: 'java'
-apply plugin: 'eclipse'
+apply plugin: 'idea'
 
 group = 'com.tzak'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
+//bootRepackage.enabled=false
 
 repositories {
 	mavenCentral()
 }
 
 dependencies {
-	compile group: 'org.springframework', name: 'spring-web', version: '5.0.2.RELEASE'
-	compile group: 'org.springframework.boot', name: 'spring-boot-devtools', version: '1.5.9.RELEASE'
-
+	compile("org.springframework.boot:spring-boot-starter-web:" + SPRING_VER)
 }
