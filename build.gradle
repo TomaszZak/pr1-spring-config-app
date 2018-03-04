@@ -15,6 +15,14 @@ version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
 //bootRepackage.enabled=false
 
+idea{
+	module{
+		inheritOutputDirs = false
+		outputDir = SERVER_EXT_DEST_BUILD_DIR
+		testOutputDir = SERVER_EXT_DEST_BUILD_DIR
+	}
+}
+
 repositories {
 	mavenCentral()
 }

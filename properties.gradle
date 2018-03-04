@@ -1,4 +1,6 @@
 ext {
     SPRING_VER = '1.5.4.RELEASE'
     SWAGGER_VER = '2.7.0'
+
+    SERVER_EXT_DEST_BUILD_DIR= file("$rootDir/server/build_config_app_classes")
 }
